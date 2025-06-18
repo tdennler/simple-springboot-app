@@ -1,0 +1,15 @@
+pluginManagement {
+    plugins {
+        id 'org.springframework.boot' version '3.3.11'
+    }
+}
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("libs.versions.toml"))
+        }
+    }
+}

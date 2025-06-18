@@ -1,0 +1,11 @@
+[versions]
+
+ver_junit = "5.12.2"
+ver_spring_boot = "3.3.10"
+
+[libraries]
+
+# Spring Boot BOM (Bill of Materials) dependency that defines all the artifact versions to use for a specific spring-boot release
+springboot_bom = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "ver_spring_boot" }
+
+spring_boot_starter = { group = 'org.springframework.boot', name = 'spring-boot-starter' }
