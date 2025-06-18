@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform(libs.springboot.bom)
+
+    implementation libs.spring.boot.starter
+}
