@@ -1,7 +1,7 @@
 [versions]
 
 ver_junit = "5.12.2"
-ver_spring_boot = "3.3.10"
+ver_spring_boot = "3.5.3"
 
 [libraries]
 
