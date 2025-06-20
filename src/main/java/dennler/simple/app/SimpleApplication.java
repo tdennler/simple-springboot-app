@@ -1,15 +1,15 @@
 package dennler.simple.app;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.List;
+
 @SpringBootApplication
 public class SimpleApplication implements ApplicationRunner {
-  private static final Logger LOGGER = LoggerFactory.getLogger(SimpleApplication.class);
   private static final String BANNER = """
            ____  _                 _           _               \s
           / ___|(_)_ __ ___  _ __ | | ___     / \\   _ __  _ __ \s
@@ -18,6 +18,8 @@ public class SimpleApplication implements ApplicationRunner {
           |____/|_|_| |_| |_| .__/|_|\\___| /_/   \\_\\ .__/| .__/\s
                             |_|                    |_|   |_| \s
           """;
+
+  private OutputInterface output = null;
 
   public static void main(String[] args) {
     SpringApplication app = new SpringApplication(SimpleApplication.class);
@@ -30,10 +32,23 @@ public class SimpleApplication implements ApplicationRunner {
     app.run(args);
   }
 
+  @Autowired
+  public SimpleApplication(OutputInterface output) {
+    this.output = output;
+  }
+
 
   @Override
   public void run(ApplicationArguments args) throws Exception {
-    LOGGER.info("Application started");
-    LOGGER.info("Hello World!");
+    String msg = "hello world";
+
+    List<String> msgs = args.getOptionValues("message");
+
+    if (msgs != null && !msgs.isEmpty()) {
+      msg = msgs.get(0);
+    }
+
+    output.send("Application started");
+    output.send(msg);
   }
 }
