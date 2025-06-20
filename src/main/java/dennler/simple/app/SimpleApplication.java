@@ -19,7 +19,7 @@ public class SimpleApplication implements ApplicationRunner {
                             |_|                    |_|   |_| \s
           """;
 
-  private OutputInterface output = null;
+  private OutputInterface output;
 
   public static void main(String[] args) {
     SpringApplication app = new SpringApplication(SimpleApplication.class);
@@ -39,7 +39,7 @@ public class SimpleApplication implements ApplicationRunner {
 
 
   @Override
-  public void run(ApplicationArguments args) throws Exception {
+  public void run(ApplicationArguments args) {
     String msg = "hello world";
 
     List<String> msgs = args.getOptionValues("message");
