@@ -1,6 +1,6 @@
 pluginManagement {
     plugins {
-        id 'org.springframework.boot' version '3.3.11'
+        id 'org.springframework.boot' version '3.5.3'
     }
 }
 
