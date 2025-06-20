@@ -9,3 +9,8 @@ ver_spring_boot = "3.3.10"
 springboot_bom = { group = "org.springframework.boot", name = "spring-boot-dependencies", version.ref = "ver_spring_boot" }
 
 spring_boot_starter = { group = 'org.springframework.boot', name = 'spring-boot-starter' }
+
+spring_boot_starter_test = { group = 'org.springframework.boot', name = 'spring-boot-starter-test' }
+
+mockito_core = { group = 'org.mockito', name = 'mockito-core' }
+mockito_jupiter = { group = 'org.mockito', name = 'mockito-junit-jupiter' }
