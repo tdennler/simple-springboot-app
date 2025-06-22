@@ -3,5 +3,9 @@
 
   "labels": ["renovate"],
 
-  "prHourlyLimit": 5
+  "prHourlyLimit": 5,
+
+  "branchPrefix": "dev_17.2.1_FNMD-12345_",
+
+  "branchPrefixOld": "renovate/"
 }
