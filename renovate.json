@@ -1,5 +1,5 @@
 {
-  "extends": ["config:recommended", ":dependencyDashboard", "group:allNonMajor"],
+  "extends": ["config:recommended", ":dependencyDashboard"],
 
   "labels": ["renovate"],
 
